@@ -1,14 +1,9 @@
 const express = require('express');
 const BlogPost = require('../models/blogPost');
+const postsRouter = require('./posts');
 
 const router = express.Router();
 
-router.get('/api/posts', (req, res) => {
-    BlogPost.find({})
-        .then((data) => {
-            res.json(data);
-        })
-        .catch((err) => {
-            res.err(err);
-        });
-});
+router.use('/api', postsRouter);
+
+module.exports = router;
