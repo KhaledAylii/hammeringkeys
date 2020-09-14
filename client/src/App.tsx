@@ -12,8 +12,7 @@ const App: React.FC = () => {
                 <Switch>
                     <Route path="/posts/create">
                         <Suspense fallback={LoadingPage}>
-                            <LoadingPage />
-                            {/* <CreatePostPage /> */}
+                            <CreatePostPage />
                         </Suspense>
                     </Route>
                     <Route path="/"></Route>

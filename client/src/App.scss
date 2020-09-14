@@ -1,6 +1,19 @@
+$color-primary: #1a1a2e;
+$color-secondary: #1a1a2e;
+$color-ternary: #0f3460;
+$color-light: #0f3460;
+$color-emphasized: #e94560;
+
+:export {
+    colorPrimary: $color-primary;
+    colorSecondary: $color-secondary;
+    colorTernary: $color-ternary;
+    colorLight: $color-light;
+    colorEmphasized: $color-emphasized;
+}
+
 .App {
     text-align: center;
-    background-color: var(--color-primary);
 }
 
 .App-logo {

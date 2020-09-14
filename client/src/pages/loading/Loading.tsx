@@ -1,6 +1,7 @@
 import React from 'react';
-import { Box, Typography } from '@material-ui/core';
+import { Box } from '@material-ui/core';
 import Loader from 'react-loader-spinner';
+import * as styles from '../../App.scss';
 
 export const Loading: React.FC = () => {
     return (
@@ -11,7 +12,12 @@ export const Loading: React.FC = () => {
             width="100vw"
             height="100vh"
         >
-            <Loader type="TailSpin" color={''} height={100} width={100} />
+            <Loader
+                type="TailSpin"
+                color={styles.colorEmphasized}
+                height={100}
+                width={100}
+            />
         </Box>
     );
 };
