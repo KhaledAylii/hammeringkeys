@@ -1,9 +1,9 @@
-$color-primary: #1a1a2e;
-$color-secondary: #1a1a2e;
-$color-ternary: #0f3460;
+$color-primary: #0f1013;
+$color-secondary: #1e1b22;
+$color-ternary: #4ecca3;
 $color-light: #0f3460;
-$color-white: #cccccc;
 $color-emphasized: #e94560;
+$color-white: #eee;
 
 body {
     margin: 0;
@@ -13,10 +13,10 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: $color-primary;
+    color: $color-white;
 }
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
-    color: $color-white;
 }
