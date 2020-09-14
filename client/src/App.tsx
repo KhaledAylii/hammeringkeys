@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import logo from './logo.svg';
-import './App.css';
+import LoadingPage from './pages/loading';
+import './App.scss';
+
+const CreatePostPage = React.lazy(() => import('./pages/create-post'));
 
 const App: React.FC = () => {
     return (
         <Router>
             <div className="App">
-                <Route path="/"></Route>
+                <Switch>
+                    <Route path="/posts/create">
+                        <Suspense fallback={LoadingPage}>
+                            <LoadingPage />
+                            {/* <CreatePostPage /> */}
+                        </Suspense>
+                    </Route>
+                    <Route path="/"></Route>
+                </Switch>
             </div>
         </Router>
     );
