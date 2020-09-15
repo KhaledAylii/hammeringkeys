@@ -33,7 +33,7 @@ const App: React.FC = () => {
                                 </Suspense>
                             </Route>
                             <Route path="/posts">
-                                <Suspense fallback={LoadingPage}>
+                                <Suspense fallback={<LoadingPage />}>
                                     <PostsPage />
                                 </Suspense>
                             </Route>
