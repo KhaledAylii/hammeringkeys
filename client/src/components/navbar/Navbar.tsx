@@ -5,7 +5,8 @@ import * as styles from '../../App.scss';
 
 const NavbarContainer = styled(Box)`
     height: 100vh;
-    width: 20%;
+    width: inherit;
+    max-width: inherit;
     background-color: ${styles.colorSecondary};
     color: ${styles.colorTernary};
     position: fixed;
