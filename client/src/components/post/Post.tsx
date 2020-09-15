@@ -4,14 +4,10 @@ import styled from 'styled-components';
 import * as styles from '../../App.scss';
 
 const StyledCard = styled(Card)`
-    width: calc(33% - 20px);
-    margin-top: 20px;
-    margin-right: 20px;
     background-color: ${styles.colorSecondary};
     color: ${styles.colorTernary};
-    @media only screen and (max-width: 900px) {
-        width: calc(50% - 20px);
-    }
+    max-width: 300px;
+    margin: auto;
 `;
 
 const StyledCardImg = styled.img`

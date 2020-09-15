@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { Box } from '@material-ui/core';
+import { Box, Grid } from '@material-ui/core';
 import axios from 'axios';
 import Post from '../../components/post';
 import styled from 'styled-components';
 import Loading from '../loading';
 
 const PostsContainer = styled(Box)`
-    padding: 20px 50px;
+    padding: 30px 50px;
+`;
+
+const StyledPostsGrid = styled(Grid)`
+    max-width: 1000px;
 `;
 
 export const Posts: React.FC = () => {
@@ -28,19 +32,17 @@ export const Posts: React.FC = () => {
             {loading && <Loading />}
             {!loading && (
                 <PostsContainer display="flex" justifyContent="center">
-                    <Box
-                        display="flex"
-                        justifyContent="flex-start"
-                        flexWrap="wrap"
-                    >
+                    <StyledPostsGrid container spacing={4}>
                         {posts.map((post) => (
-                            <Post
-                                title={post.title}
-                                body={post.body}
-                                thumbnailURL={post.thumbnailURL}
-                            />
+                            <Grid item xs={12} sm={6} md={4} justify="center">
+                                <Post
+                                    title={post.title}
+                                    body={post.body}
+                                    thumbnailURL={post.thumbnailURL}
+                                />
+                            </Grid>
                         ))}
-                    </Box>
+                    </StyledPostsGrid>
                 </PostsContainer>
             )}
         </>
