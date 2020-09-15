@@ -32,9 +32,15 @@ export const Posts: React.FC = () => {
             {loading && <Loading />}
             {!loading && (
                 <PostsContainer display="flex" justifyContent="center">
-                    <StyledPostsGrid container spacing={4} justify="center">
-                        {posts.map((post) => (
-                            <Grid item xs={12} sm={6} md={4}>
+                    <StyledPostsGrid container spacing={4}>
+                        {posts.map((post, index) => (
+                            <Grid
+                                item
+                                key={`blogPost-${index}`}
+                                xs={12}
+                                sm={6}
+                                md={4}
+                            >
                                 <Post
                                     title={post.title}
                                     body={post.body}
