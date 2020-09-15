@@ -20,6 +20,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: |
-          cd client
-          npm run test:webapp:dev
+        run: npm run test:client
