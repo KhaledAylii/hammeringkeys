@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Box, Grid } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import LoadingPage from './pages/loading';
 import './App.scss';
 import styled from 'styled-components';
@@ -13,10 +13,6 @@ const NavBarContainer = styled(Grid)`
     @media (max-width: 600px) {
         display: none;
     }
-`;
-
-const AppContainer = styled(Box)`
-    width: 100%;
 `;
 
 const App: React.FC = () => {

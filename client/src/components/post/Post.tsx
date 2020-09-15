@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, Typography, CardMedia } from '@material-ui/core';
+import { Card, CardContent, Typography } from '@material-ui/core';
 import styled from 'styled-components';
 import * as styles from '../../App.scss';
 
