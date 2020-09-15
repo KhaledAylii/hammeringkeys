@@ -1,7 +1,8 @@
 import React from 'react';
-import { Box, Typography } from '@material-ui/core';
+import { Box } from '@material-ui/core';
 import styled from 'styled-components';
 import * as styles from '../../App.scss';
+import BlinkingCursor from '../blinking-cursor';
 
 const NavbarContainer = styled(Box)`
     height: 100vh;
@@ -18,9 +19,7 @@ const NavbarContainer = styled(Box)`
 export const Navbar: React.FC = () => {
     return (
         <NavbarContainer>
-            <Typography variant="h5" component="h2">
-                <code>hammering keys</code>
-            </Typography>
+            <BlinkingCursor variant="h5" text="hammering keys" />
         </NavbarContainer>
     );
 };
